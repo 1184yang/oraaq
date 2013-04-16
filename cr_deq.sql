@@ -1,4 +1,12 @@
--- Login as AQDEMO
+/* Login as AQDEMO, Create at Remote Site
+|  Author: 楊震宇  xyang@mail.pec.com.tw
+|  Modified on 2013/04/03
+|
+|  conn aqdemo/aqdemo
+|
+|  除了可用 Notification 自動 Dequeue 外, 也可手動 Dequeue 
+|  SQL> exec dequeue_msg;
+*/
 
 connect aqdemo/aqdemo
 
@@ -16,6 +24,7 @@ BEGIN
                    message_properties => message_properties,
                    payload => message,
                    msgid => message_handle);
+
    insert into message_table values
    ( 'Dequeued and processed "' || message.text || '"' );
 
