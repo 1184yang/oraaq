@@ -11,11 +11,13 @@
 BEGIN
    dbms_aq.register
      (sys.aq$_reg_info_list(
-      sys.aq$_reg_info('AQADMIN.MSG_QUEUE:RECIPIENT',
-                        DBMS_AQ.NAMESPACE_AQ,
-                        /* Dequeue 的程式 */
-                        'plsql://AQDEMO.notifyCB',
-                        HEXTORAW('FF'))),
-                        1);
+         sys.aq$_reg_info('AQADMIN.MSG_QUEUE:RECIPIENT',
+                           DBMS_AQ.NAMESPACE_AQ,
+                           /* Dequeue 的程式 */
+                           'plsql://AQDEMO.notifyCB',
+                           HEXTORAW('FF')
+                         )),
+      1
+     );
 end;
 /
