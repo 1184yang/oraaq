@@ -26,7 +26,7 @@ How to Dequeue AQ exception queue
     ------ -------------------- --------------
         22 READY                HRC_TRN_QUEUE
         10 PROCESSED            HRC_TRN_QUEUE
-		9  EXPIRED              AQ$_HRC_TRN_QTAB_E  <== 如果有Exception Message
+	 9 EXPIRED              AQ$_HRC_TRN_QTAB_E  <== 如果有Exception Message
 		
 3.Enable the exception queue for dequeue
 
