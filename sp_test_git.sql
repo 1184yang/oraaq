@@ -1,2 +1,2 @@
-select * from emp where empno = 7788
+select * from emp where deptno = 10
 /
